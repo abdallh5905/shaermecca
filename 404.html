@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - الصفحة غير موجودة | شعائر مكة للعمرة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Cairo', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #064e3b 0%, #042f2e 100%);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .error-container {
+        max-width: 600px;
+      }
+
+      .error-code {
+        font-size: 8rem;
+        font-weight: 900;
+        opacity: 0.2;
+        line-height: 1;
+        margin-bottom: -20px;
+      }
+
+      .error-icon {
+        font-size: 5rem;
+        color: #d4af37;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        margin-bottom: 40px;
+        line-height: 1.8;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: 'Cairo', sans-serif;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: #25D366;
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background: #128C7E;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: #064e3b;
+      }
+
+      .btn-secondary:hover {
+        background: #f3f4f6;
+        transform: translateY(-3px);
+      }
+
+      .home-link {
+        margin-top: 30px;
+        color: #d4af37;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <div class="error-icon">
+        <i class="fas fa-mosque"></i>
+      </div>
+      <h1>الصفحة غير موجودة</h1>
+      <p>عذراً، يبدو أن الصفحة التي تبحث عنها غير موجودة أو تم نقلها.<br>يمكنك العودة للرئيسية أو التواصل معنا عبر الواتساب.</p>
+      <div class="buttons">
+        <a href="index.html" class="btn btn-secondary">
+          <i class="fas fa-home"></i>
+          الرئيسية
+        </a>
+        <a href="https://wa.me/966559029157" class="btn btn-primary" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          تواصل معنا
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
