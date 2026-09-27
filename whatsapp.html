@@ -3,18 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>تنظيم رحلات عمرة من الرياض | احجز رحلتك الآن</title>
-    <meta name="description" content="تنظيم رحلات عمرة من الرياض إلى مكة المكرمة | باصات حديثة ومكيفة | فنادق قريبة من الحرم | احجز الآن عبر الواتساب" />
+    <title>جاري التحويل إلى واتساب...</title>
+    <meta name="description" content="تنظيم رحلات عمرة من الرياض إلى مكة المكرمة | احجز الآن عبر الواتساب" />
+
+    <!-- التحويل المباشر لواتساب -->
+    <script>
+      (function () {
+        var phone = "966548518022";
+        var message = "السلام عليكم، أريد الاستفسار عن تنظيم رحلات عمرة من الرياض";
+        var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+        // محاولة فتح واتساب مباشرة (يشتغل مع تطبيق الواتساب أو الواتساب ويب)
+        window.location.replace(url);
+
+        // محاولة إضافية لفتح التطبيق على الجوال (احتياط)
+        setTimeout(function () {
+          window.location.href = "whatsapp://send?phone=" + phone + "&text=" + encodeURIComponent(message);
+        }, 500);
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
 
       body {
         font-family: 'Cairo', sans-serif;
@@ -30,10 +44,7 @@
       body::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         background: rgba(6, 78, 59, 0.85);
       }
 
@@ -67,42 +78,20 @@
       }
 
       h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: 900;
         margin-bottom: 15px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         line-height: 1.4;
       }
 
-      .highlight {
-        color: #d4af37;
-      }
+      .highlight { color: #d4af37; }
 
       .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         opacity: 0.9;
         margin-bottom: 40px;
         line-height: 1.8;
-      }
-
-      .features {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 40px;
-        flex-wrap: wrap;
-      }
-
-      .feature {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 1rem;
-      }
-
-      .feature i {
-        color: #d4af37;
-        font-size: 1.2rem;
       }
 
       .whatsapp-btn {
@@ -117,7 +106,6 @@
         font-weight: 700;
         text-decoration: none;
         transition: all 0.3s ease;
-        font-family: 'Cairo', sans-serif;
         border: none;
         cursor: pointer;
         box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
@@ -129,9 +117,7 @@
         box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
       }
 
-      .whatsapp-btn i {
-        font-size: 1.8rem;
-      }
+      .whatsapp-btn i { font-size: 1.8rem; }
     </style>
   </head>
   <body>
@@ -139,28 +125,17 @@
       <div class="logo">
         <i class="fas fa-mosque"></i>
       </div>
-      <h1>تنظيم رحلات عمرة <span class="highlight">من الرياض</span></h1>
+      <h1>جاري تحويلك إلى <span class="highlight">الواتساب</span>...</h1>
       <p class="subtitle">
-        رحلات عمرة من الرياض إلى مكة المكرمة<br>
-        باصات حديثة ومكيفة | فنادق قريبة من الحرم
+        إذا لم يتم التحويل تلقائياً، اضغط على الزر بالأسفل<br>
+        لبدء محادثة حجز رحلات العمرة من الرياض
       </p>
-      <div class="features">
-        <div class="feature">
-          <i class="fas fa-check-circle"></i>
-          <span>رحلات يومية</span>
-        </div>
-        <div class="feature">
-          <i class="fas fa-check-circle"></i>
-          <span>باصات فاخرة</span>
-        </div>
-        <div class="feature">
-          <i class="fas fa-check-circle"></i>
-          <span>أسعار منافسة</span>
-        </div>
-      </div>
-      <a href="https://wa.me/966548518022?text=السلام%20عليكم%2C%20أريد%20الاستفسار%20عن%20تنظيم%20رحلات%20عمرة%20من%20الرياض" class="whatsapp-btn" id="whatsappBtn" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/966548518022?text=السلام%20عليكم%2C%20أريد%20الاستفسار%20عن%20تنظيم%20رحلات%20عمرة%20من%20الرياض"
+         class="whatsapp-btn"
+         target="_blank"
+         rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
-        احجز عبر الواتساب
+        فتح الواتساب الآن
       </a>
     </div>
   </body>
