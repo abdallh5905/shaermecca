@@ -1,142 +1,41 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>جاري التحويل إلى واتساب...</title>
-    <meta name="description" content="تنظيم رحلات عمرة من الرياض إلى مكة المكرمة | احجز الآن عبر الواتساب" />
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>احجز رحلة عمرة من الرياض عبر واتساب</title>
+...
+<style> similar </style>
+</head>
+<body>
+<div class="container">
+...
+<a href="https://api.whatsapp.com/send?phone=966548518022&text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%86%D8%B8%D9%8A%D9%85%20%D8%B1%D8%AD%D9%84%D8%A7%D8%AA%20%D8%B9%D9%85%D8%B1%D8%A9%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6"
+   class="whatsapp-btn" id="waBtn" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+  اضغط للحجز عبر الواتساب
+</a>
 
-    <!-- التحويل المباشر لواتساب -->
-    <script>
-      (function () {
-        var phone = "966548518022";
-        var message = "السلام عليكم، أريد الاستفسار عن تنظيم رحلات عمرة من الرياض";
-        var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+<script>
+  // لو عايز تحاول تفتح التطبيق على الموبايل أولاً
+  document.getElementById('waBtn').addEventListener('click', function(e) {
+    // مش هنمنع السلوك الافتراضي، الرابط نفسه كفاية
+    // لكن ممكن نحاول نفتح التطبيق مباشرة
+    var phone = "966548518022";
+    var msg = "السلام عليكم، أريد الاستفسار عن تنظيم رحلات عمرة من الرياض";
+    var appUrl = "whatsapp://send?phone=" + phone + "&text=" + encodeURIComponent(msg);
+    var webUrl = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(msg);
 
-        // محاولة فتح واتساب مباشرة (يشتغل مع تطبيق الواتساب أو الواتساب ويب)
-        window.location.replace(url);
-
-        // محاولة إضافية لفتح التطبيق على الجوال (احتياط)
-        setTimeout(function () {
-          window.location.href = "whatsapp://send?phone=" + phone + "&text=" + encodeURIComponent(message);
-        }, 500);
-      })();
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-
-      body {
-        font-family: 'Cairo', sans-serif;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: url('https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=1920&q=80') center/cover no-repeat;
-        position: relative;
-        overflow: hidden;
-      }
-
-      body::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(6, 78, 59, 0.85);
-      }
-
-      .container {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        color: #fff;
-        padding: 40px 20px;
-        max-width: 700px;
-      }
-
-      .logo {
-        width: 100px;
-        height: 100px;
-        background: linear-gradient(135deg, #064e3b, #10b981);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 30px;
-        font-size: 50px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-        70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-      }
-
-      h1 {
-        font-size: 2rem;
-        font-weight: 900;
-        margin-bottom: 15px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        line-height: 1.4;
-      }
-
-      .highlight { color: #d4af37; }
-
-      .subtitle {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        margin-bottom: 40px;
-        line-height: 1.8;
-      }
-
-      .whatsapp-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: #25D366;
-        color: #fff;
-        padding: 20px 50px;
-        border-radius: 60px;
-        font-size: 1.3rem;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-      }
-
-      .whatsapp-btn:hover {
-        background: #128C7E;
-        transform: scale(1.05);
-        box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
-      }
-
-      .whatsapp-btn i { font-size: 1.8rem; }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <i class="fas fa-mosque"></i>
-      </div>
-      <h1>جاري تحويلك إلى <span class="highlight">الواتساب</span>...</h1>
-      <p class="subtitle">
-        إذا لم يتم التحويل تلقائياً، اضغط على الزر بالأسفل<br>
-        لبدء محادثة حجز رحلات العمرة من الرياض
-      </p>
-      <a href="https://wa.me/966548518022?text=السلام%20عليكم%2C%20أريد%20الاستفسار%20عن%20تنظيم%20رحلات%20عمرة%20من%20الرياض"
-         class="whatsapp-btn"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-        فتح الواتساب الآن
-      </a>
-    </div>
-  </body>
+    // لو موبايل، جرب التطبيق
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      e.preventDefault();
+      window.location.href = appUrl;
+      setTimeout(function() {
+        window.location.href = webUrl;
+      }, 1000);
+    }
+    // لو ديسكتوب، الرابط هيفتح واتساب ويب
+  });
+</script>
+</body>
 </html>
