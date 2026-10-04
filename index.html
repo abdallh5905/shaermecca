@@ -36,6 +36,12 @@
           'currency': 'SAR',
           'event_callback': callback
         });
+        // الحساب الجديد: طلب عرض أسعار تقديري
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18416329084/EgP_CIKripAdEPzCy81E',
+          'value': 1.0,
+          'currency': 'SAR'
+        });
         return false;
       }
 
@@ -49,6 +55,12 @@
           'value': 1.0,
           'currency': 'SAR',
           'event_callback': callback
+        });
+        // الحساب الجديد: حجز موعد
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18416329084/BXclCKacg5AdEPzCy81E',
+          'value': 1.0,
+          'currency': 'SAR'
         });
         return false;
       }
