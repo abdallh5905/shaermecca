@@ -28,6 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
 // FAQ
 document.querySelectorAll('.faq-question').forEach(q => {
   q.addEventListener('click', () => {
